@@ -1,11 +1,11 @@
 // combines all the redux reducers into a single store.
+// Currently we only have one reducer, but could support more
 
 import { combineReducers } from 'redux';
 
-import counter from './counter';
-import quote from './quote';
+
+import combatants from './combatants';
 
 export default combineReducers({
-  counter,
-  quote,
+  combatants,
 });

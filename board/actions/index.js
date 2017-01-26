@@ -6,6 +6,14 @@ import 'whatwg-fetch';
 // Synchronous actions are just Javascript objects that contain a `type` and other metadata. The
 // `type` allows the `store` to distinguish what action is occurring, and, if present, the Redux
 // reducers can use the metadata in other fields to modify the state properly.
+export function changeHP(combatantName, hpChange) {
+  return {
+    type: 'CHANGE_HP',
+    combatantName,
+    hpChange,
+  };
+}
+
 export function incrementCounter() {
   return { type: 'INCREMENT_COUNTER' };
 }

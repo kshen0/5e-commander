@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import { applyMiddleware, createStore, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import ExampleApp from './components/ExampleApp';
+import BoardContainer from './components/BoardContainer';
 import reducers from './reducers';
 
 // createStore initializes each reducer, and hence populates the initial state. To see initial
@@ -21,8 +21,8 @@ const store = createStore(reducers, compose(
 ));
 
 export function run() {
-  const el = document.getElementById('example-app-wrapper');
+  const el = document.getElementById('board-container');
   render(<Provider store={store}>
-    <ExampleApp />
+    <BoardContainer />
   </Provider>, el);
 }
